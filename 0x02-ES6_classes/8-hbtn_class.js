@@ -20,13 +20,13 @@ export default class HolbertonClass {
     this._location = value;
   }
 
-  [Symbol.toPrimitive](hint) {
-    if (hint === 'number') {
-      return this.size;
-    }
-    if (hint === 'string') {
-      return this.location;
-    }
-    return this;
+  // Override valueOf to return size when the object is cast to a number
+  valueOf() {
+    return this.size;
+  }
+
+  // Override toString to return location when the object is cast to a string
+  toString() {
+    return this.location;
   }
 }
