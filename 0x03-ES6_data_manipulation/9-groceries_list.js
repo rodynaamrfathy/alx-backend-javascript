@@ -1,12 +1,16 @@
+/**
+ * Retrieves a map of grocery names and their quantity.
+ * @returns {Map<string, Number>}
+ */
 export default function groceriesList() {
-  const map = new Map([
-    ["Apples", 10],
-    ["Tomatoes", 10],
-    ["Pasta", 1],
-    ["Rice", 1],
-    ["Banana", 5]
-  ]);
+        let map = new Map;
 
-  return map;
+        map
+                .set("Apples", 10)
+                .set("Tomatoes", 10)
+                .set("Pasta", 1)
+                .set("Rice", 1)
+                .set("Banana", 5);
+
+        return map;
 }
-
